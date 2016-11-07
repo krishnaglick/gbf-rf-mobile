@@ -17,7 +17,7 @@ class Sidebar extends Component {
       activeBoss: null
     };
     _.forEach(Object.keys(actions), key => this[key] = actions[key].bind(this));
-    const ws = new WebSocket('ws://192.168.0.9:9000/ws/raids?keepAlive=true', 'json');
+    const ws = new WebSocket('ws://gbf-raidfinder.aikats.us/ws/raids?keepAlive=true', 'json');
     this.getBosses(ws);
   }
 

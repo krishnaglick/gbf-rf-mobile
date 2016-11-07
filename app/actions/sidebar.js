@@ -1,6 +1,5 @@
 
 import _ from 'lodash';
-const numRgx = /([\d])/g;
 
 export function toggleSideMenu() {
   this.setState({

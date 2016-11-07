@@ -20,7 +20,7 @@ class BossList extends Component {
     };
     this.selectBoss = () => props.selectBoss(null);
     _.forEach(Object.keys(actions), key => this[key] = actions[key].bind(this));
-    this.ws = new WebSocket('ws://192.168.0.9:9000/ws/raids?keepAlive=true', 'json');
+    this.ws = new WebSocket('ws://gbf-raidfinder.aikats.us/ws/raids?keepAlive=true', 'json');
     this.getBossList(this.ws);
   }
 
@@ -48,7 +48,6 @@ class BossList extends Component {
 
     const sortedBosses = _.orderBy(bosses, b => b.createdAt, ['desc']);
     const bossElems = _.map(sortedBosses, (boss) => <Boss {...boss} bossName={name} key={boss.raidId} />);
-    console.log({bosses});
 
     let _scrollView = new ScrollView();
 
