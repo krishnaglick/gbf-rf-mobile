@@ -1,0 +1,30 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "plugins": [
+    "react",
+    "react-native"
+  ],
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 7,
+    "ecmaFeatures": {
+      "jsx": true,
+      "impliedStrict": true
+    }
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "indent": [ "warn", 2 ],
+    "semi": [ "error", "always" ],
+    "quotes": ["error", "single"],
+    "strict": 0,
+    "no-console": 0,
+    "require-yield": 0,
+    "no-undef": 2,
+    "react/prop-types": 0
+  }
+}
